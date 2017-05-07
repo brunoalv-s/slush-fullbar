@@ -1,17 +1,18 @@
 'use strict';
 
-var gulp = require('gulp'),
-    sass = require('gulp-sass'),
+var gulp        = require('gulp'),
+    sass        = require('gulp-sass'),
     browserSync = require('browser-sync'),
-    gutil = require('gulp-util'),
-    plumber = require('gulp-plumber'),
-    uglify = require('gulp-uglify'),
-    concat = require('gulp-concat'),
-    cleanCss = require('gulp-clean-css'),
-    prefix = require('gulp-autoprefixer'),
-    rename = require('gulp-rename'),
-    sourcemaps = require('gulp-sourcemaps'),
+    plumber     = require('gulp-plumber'),
+    uglify      = require('gulp-uglify'),
+    concat      = require('gulp-concat'),
+    cleanCss    = require('gulp-clean-css'),
+    prefix      = require('gulp-autoprefixer'),
+    rename      = require('gulp-rename'),
+    sourcemaps  = require('gulp-sourcemaps'),
 
+    // Caminhos padrão de projeto
+    // Exemplo de uso: path.scripts.main => 'assets/js/main.js'
     path = {
         styles: {
             main: 'assets/sass/main.{sass,scss}',
@@ -41,6 +42,7 @@ gulp.task('sass', function() {
         .pipe(cleanCss())
         .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest(path.styles.dest))
+        .pipe(browserSync.reload({ stream: true }));
 });
 
 gulp.task('js', function() {
@@ -53,3 +55,35 @@ gulp.task('js', function() {
         .pipe(gulp.dest(path.scripts.dest))
         .pipe(browserSync.reload({ stream: true }));
 });
+
+// Abre o browser-sync apenas para testes e visualização em outros dispositivos
+// Geralmente para a visualização do GP.
+gulp.task('homologa', function() {
+    browserSync.init({
+        open: false,
+        server: './',
+
+        ghostMode: {
+            scroll: false,
+            forms: false,
+            clicks: false
+        }
+    });
+});
+
+// Inicia o Browser-Sync para o desenvolvimento. (Comportamento padrão)
+gulp.task('dev', function() {
+    browserSync.init({
+        server: './'
+    });
+
+    gulp.watch(path.styles.all, ['sass']);
+    gulp.watch(path.scripts.all, ['js']);
+    gulp.watch('./*.html').on('change', browserSync.reload);
+});
+
+// Compila todos os arquivos SASS e Js do projeto.
+gulp.task('build', ['sass', 'js']);
+
+// Tarefa padrão de desenvolvimento.
+gulp.task('default', ['build', 'dev']);
