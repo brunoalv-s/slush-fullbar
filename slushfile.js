@@ -34,6 +34,10 @@ gulp.task('default', function(done) {
     }, {
         name: 'gitRepo',
         message: 'Tem repositório Git?'
+    }, {
+        name: 'appDescription',
+        message: 'Qual a descrição do Projeto?',
+        default: 'Novo Projeto'
     }];
 
     //Ask

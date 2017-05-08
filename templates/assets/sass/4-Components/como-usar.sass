@@ -1,0 +1,72 @@
+body
+    width: 100vw
+    // height: 100vh
+    display: flex
+    justify-content: center
+    align-content: center
+    font-family: sans-serif
+    background-color: $color-base
+
+.site-wrapper
+    width: 90%
+    max-width: 960px
+    height: 100%
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    padding: 1em
+    margin: 1em
+    background-color: $white
+    border-radius: 4px
+
+    @media (min-width: 450px)
+        align-self: center
+        padding: 2em
+
+header
+    width: 100%
+    margin: 1em auto
+
+    .logo
+        max-width: 300px
+
+        path.colorA
+            fill: $color-base
+        path.colorB
+            fill: $color-2
+
+.content
+    width: 100%
+
+    h1, h2
+        color: $color-2
+        text-transform: uppercase
+        padding: .5em 0
+
+    h1
+        font-size: 30px
+
+    h2
+        font-size: 26px
+
+    h3
+        color: $color-2
+
+    p
+        margin-bottom: 1em;
+        line-height: 1.4
+
+    ul
+        list-style: none
+
+        li
+            margin: 1em .5em
+
+            a
+                color: $color-2
+
+    hr
+        margin-bottom: 1em
+
+
+footer

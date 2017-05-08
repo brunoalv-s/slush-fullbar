@@ -1,7 +1,7 @@
 {
-  "name": "<% appNameSlug %>",
+  "name": "teste",
   "version": "1.0.0",
-  "description": "<% appDescription %>",
+  "description": "desc",
   "main": "gulpfile.js",
   "keywords": [
     "slushgenerator"
