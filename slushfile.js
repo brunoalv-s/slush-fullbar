@@ -32,9 +32,6 @@ gulp.task('default', function(done) {
         name: 'appAuthor',
         message: 'Name of author?'
     }, {
-        name: 'gitRepo',
-        message: 'Tem repositório Git?'
-    }, {
         name: 'appDescription',
         message: 'Qual a descrição do Projeto?',
         default: 'Novo Projeto'
