@@ -1,6 +1,6 @@
 {
   "name": "slush-fullbar",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A slush generator boilerplate",
   "main": "slushfile.js",
   "keywords": [
