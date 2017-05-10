@@ -14,14 +14,9 @@ var gulp     = require('gulp'),
     template = require('gulp-template'),
     rename   = require('gulp-rename'),
     _        = require('underscore.string'),
-    inquirer = require('inquirer'),
-    gutil    = require('gulp-util');
+    inquirer = require('inquirer');
 
 gulp.task('default', function(done) {
-
-    gutil.log(
-        gutil.colors.yellow('Bem-vindo ao gerador de Boilerplate da Fullbar')
-    );
 
     // Lista de Perguntas
     var prompts = [{
@@ -30,11 +25,11 @@ gulp.task('default', function(done) {
         default: 'Projeto Fullbar'
     }, {
         name: 'appAuthor',
-        message: 'Name of author?'
+        message: 'Nome do Autor?'
     }, {
         name: 'appDescription',
         message: 'Qual a descrição do Projeto?',
-        default: 'Novo Projeto'
+        default: 'Novo projeto em desenvolvimento'
     }];
 
     //Ask

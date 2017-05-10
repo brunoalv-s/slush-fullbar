@@ -22,7 +22,7 @@ Execute o gerador dentro da nova pasta
 ```
 cd my-fullbar-app
 
-slush-fullbar
+slush fullbar
 ```
 
 Agora você terá algumas perguntas para responder, esse passo é importante para a configuração do seu projeto. Você pode apenas ir apertando o enter, se você desejar a configuração Padrão.
