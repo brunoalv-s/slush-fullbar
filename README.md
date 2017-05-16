@@ -1,4 +1,5 @@
-# Gerador Fullbar [![npm version](https://badge.fury.io/js/slush-fullbar.svg)](https://badge.fury.io/js/slush-fullbar) [![](https://img.shields.io/badge/unicorn-approved-ff69b4.svg)](https://www.youtube.com/watch?v=9auOCbH5Ns4)
+# Gerador Fullbar
+[![npm version](https://badge.fury.io/js/slush-fullbar.svg)](https://badge.fury.io/js/slush-fullbar) [![](https://img.shields.io/badge/unicorn-approved-ff69b4.svg)](https://www.youtube.com/watch?v=9auOCbH5Ns4) [![](https://david-dm.org/brunoalv-s/slush-fullbar.svg)](https://david-dm.org/brunoalv-s/slush-fullbar)
 
 ### Instalação
 
