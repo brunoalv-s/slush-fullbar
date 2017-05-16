@@ -46,13 +46,13 @@ gulp.task('default', function(done) {
       message: 'Qual a descrição do Projeto?',
       default: 'Novo projeto em desenvolvimento'
   }, {
-      type: 'checkbox',
+      type: 'list',
       name: 'cssFramework',
       message: 'Qual Framework CSS você vai usar?',
       choices: ['boostrap', 'bulma', 'Nenhum'],
       default: 'Nenhum'
   }, {
-      type: 'checkbox',
+      type: 'list',
       name: 'templateEngine',
       message: 'Deseja utilizar algum Template Engine?',
       choices: ['jade/pug', 'Nenhum'],
