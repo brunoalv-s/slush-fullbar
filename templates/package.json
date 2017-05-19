@@ -6,6 +6,10 @@
   "keywords": [
     "slushgenerator"
   ],
+  "scripts": {
+    "start": "gulp",
+    "postinstall": "npm install"
+  },
   "author": "Fullbar",
   "license": "MIT",
   "devDependencies": {

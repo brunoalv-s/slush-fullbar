@@ -2,10 +2,9 @@
  * slush-fullbar
  * https://github.com/seu-nome/slush-fullbar
  *
- * Copyright (c) 2014, Fullbar
+ * Copyright (c) 2017, Fullbar
  * Licensed under the MIT license.
  */
-
 'use strict';
 
 var gulp     = require('gulp'),
@@ -17,6 +16,11 @@ var gulp     = require('gulp'),
     gutil    = require('gulp-util'),
     inquirer = require('inquirer'),
     _        = require('underscore.string');
+
+    var options = {
+      templatesDir: __dirname + '/templates',
+    };
+
 
 gulp.task('default', function(done) {
 
