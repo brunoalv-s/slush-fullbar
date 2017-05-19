@@ -18,22 +18,6 @@ var gulp     = require('gulp'),
     inquirer = require('inquirer'),
     _        = require('underscore.string');
 
-    var paths = {
-      frameworkCSS: {
-        bootstrap: '/assets/sass/1-settings/vendor/bootstrap/**',
-        bulma: '/assets/sass/1-settings/vendor/bulma/**/*'
-      },
-      templateEngine: {
-        pug: '/**/*.pug',
-        html: '/**/*.html'
-      }
-    };
-
-    var options = {
-      templatesDir: __dirname + '/templates',
-    };
-
-
 gulp.task('default', function(done) {
 
   // Lista de Perguntas
@@ -74,26 +58,26 @@ gulp.task('default', function(done) {
     var files = [options.templatesDir + '/**'];
     if (answers.cssFramework === 'bootstrap') {
       files.push(
-        '!' + options.templatesDir + paths.frameworkCSS.bulma
+        '!' + options.templatesDir + '/assets/sass/1-settings/vendor/bulma/**/*'
       );
     } else if (answers.cssFramework === 'bulma') {
       files.push(
-        '!' + options.templatesDir + paths.frameworkCSS.bootstrap
+        '!' + options.templatesDir + '/assets/sass/1-settings/vendor/bootstrap/**'
       );
     } else if (answers.cssFramework === 'Nenhum') {
       files.push(
-        '!' + options.templatesDir + paths.frameworkCSS.bootstrap,
-        '!' + options.templatesDir + paths.frameworkCSS.bulma
+        '!' + options.templatesDir + '/assets/sass/1-settings/vendor/bootstrap/**',
+        '!' + options.templatesDir + '/assets/sass/1-settings/vendor/bulma/**/*'
       );
     };
 
     if (answers.templateEngine === 'Nenhum') {
       files.push(
-        '!' + options.templatesDir + paths.templateEngine.pug
+        '!' + options.templatesDir + '/**/*.pug'
       )
     } else if (answers.templateEngine === 'jade/pug') {
       files.push(
-        '!' + options.templatesDir + paths.templateEngine.html
+        '!' + options.templatesDir + '/**/*.html'
       );
     };
 
